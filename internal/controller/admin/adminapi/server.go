@@ -1,4 +1,4 @@
-package httpserver
+package adminapi
 
 import (
 	"context"
@@ -39,7 +39,7 @@ func New(cfg *config.Config, wg *wait.Wait) (*server, error) {
 }
 
 func (srv *server) Start() error {
-	log.Infof("Starting http server. Host: [%s]", srv.conf.HttpServerHost)
+	log.Infof("Starting http server. Host: [%s]", srv.conf.HTTPServerHost)
 	srv.wait.Add()
 
 	srv.e.Use(middleware.LoggerWithConfig(middleware.DefaultLoggerConfig))
@@ -48,7 +48,7 @@ func (srv *server) Start() error {
 	srv.router.build()
 
 	go func() {
-		if err := srv.e.Start(srv.conf.HttpServerHost); err != nil {
+		if err := srv.e.Start(srv.conf.HTTPServerHost); err != nil {
 			if !srv.wait.IsBlock() {
 				log.WithError(err).Fatal("error starting http server. Error: [%s]", err)
 			}

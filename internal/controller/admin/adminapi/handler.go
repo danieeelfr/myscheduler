@@ -1,4 +1,4 @@
-package httpserver
+package adminapi
 
 import (
 	"github.com/danieeelfr/myscheduler/internal/config"
@@ -18,7 +18,7 @@ func newHandler(cfg *config.Config, wg *wait.Wait) (*handler, error) {
 	return h, nil
 }
 
-func (h *handler) GetUser(ctx echo.Context) error {
+func (h *handler) GetUsers(ctx echo.Context) error {
 
 	return nil
 }

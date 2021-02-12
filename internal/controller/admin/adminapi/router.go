@@ -1,4 +1,4 @@
-package httpserver
+package adminapi
 
 import (
 	"net/http"
@@ -38,7 +38,7 @@ func newRouter(e *echo.Echo, cfg *config.Config, wg *wait.Wait) (*router, error)
 			&route{
 				method:   http.MethodGet,
 				endpoint: path.Join(Prefix, UserEndpoint),
-				handler:  handler.GetUser,
+				handler:  handler.GetUsers,
 			},
 		},
 	}, nil

@@ -16,7 +16,7 @@ func New(app string) *Config {
 	switch app {
 	case MySchedulerApp:
 		cfg.myschedulerConf = &MySchedulerConf{
-			HttpServerHost: "localhost:1313",
+			HTTPServerHost: "localhost:1313",
 		}
 	}
 

@@ -5,7 +5,7 @@ type Config struct {
 }
 
 type MySchedulerConf struct {
-	HttpServerHost string
+	HTTPServerHost string
 	WaitToShutdown uint
 }
 
