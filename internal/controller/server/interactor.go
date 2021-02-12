@@ -2,7 +2,7 @@ package myscheduler
 
 import (
 	"github.com/danieeelfr/myscheduler/internal/config"
-	"github.com/danieeelfr/myscheduler/internal/controller/admin/adminapi"
+	"github.com/danieeelfr/myscheduler/internal/controller/server/adminapi"
 	"github.com/danieeelfr/myscheduler/pkg/wait"
 )
 

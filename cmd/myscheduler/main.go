@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/danieeelfr/myscheduler/internal/config"
-	controller "github.com/danieeelfr/myscheduler/internal/controller/admin"
+	controller "github.com/danieeelfr/myscheduler/internal/controller/server"
 	"github.com/danieeelfr/myscheduler/pkg/wait"
 	"github.com/sirupsen/logrus"
 )
